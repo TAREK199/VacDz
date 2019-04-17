@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $menuItem='plan';
+    return view('welcome',[
+        'menuItem' => $menuItem
+    ]);
 });
