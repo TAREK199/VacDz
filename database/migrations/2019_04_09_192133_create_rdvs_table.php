@@ -17,7 +17,7 @@ class CreateRdvsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('enfant_id');
             $table->unsignedInteger('polyclinique_id');
-            $table->date('date_prise_rdv');
+            $table->date('date_rdv');
             $table->timestamps();
         });
     }

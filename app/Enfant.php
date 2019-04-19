@@ -11,5 +11,9 @@ class Enfant extends Model
     {
         return $this->belongsTo(Pere::class);
     }
+    public function commune()
+    {
+        return $this->belongsTo(Commune::class);
+    }
 
 }

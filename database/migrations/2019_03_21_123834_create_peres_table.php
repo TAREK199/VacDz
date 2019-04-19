@@ -19,7 +19,6 @@ class CreatePeresTable extends Migration
             $table->string('prenom'); 
             $table->string('tel1');
             $table->string('tel2');
-            $table->unsignedInteger('commune');
             $table->string('cite');
             $table->timestamps();
         });

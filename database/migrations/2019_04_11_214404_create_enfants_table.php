@@ -17,11 +17,12 @@ class CreateEnfantsTable extends Migration
             $table->integer('id')->primary();//num_etat_civiles
             $table->string('nom');
             $table->string('prenom');
-            $table->boolean('sexe');
+            $table->boolean('sex');
             $table->text('observation');
             $table->unsignedInteger('pere_id');
             $table->date('date_naissance');
-            $table->string('lieu_naissance');
+            $table->string('lieu_naissance');//
+            $table->unsignedInteger('commune_id');
             $table->timestamps();
         });
     }

@@ -77,9 +77,9 @@ body {}
 @font-face {
   font-family: 'educate-icon';
   src:
-    url('fonts/educate-icon.ttf?ka5vvx') format('truetype'),
-    url('fonts/educate-icon.woff?ka5vvx') format('woff'),
-    url('fonts/educate-icon.svg?ka5vvx#educate-icon') format('svg');
+    url('http://127.0.0.1:8000/fonts/educate-icon.ttf?ka5vvx') format('truetype'),
+    url('http://127.0.0.1:8000/fonts/educate-icon.woff?ka5vvx') format('woff'),
+    url('http://127.0.0.1:8000/fonts/educate-icon.svg?ka5vvx#educate-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -3608,8 +3608,6 @@ td.text-right.mail-date {
 .btn-success.loginbtn {
     background-color: #006DF0;
     border-color: #006DF0;
-    
-
 }
 .lock-inner i {
     font-size: 60px;

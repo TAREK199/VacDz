@@ -14,7 +14,8 @@ class EnfantController extends Controller
      */
     public function index()
     {
-        //
+        return view('enfants.index');
+        
     }
 
     /**
@@ -24,7 +25,7 @@ class EnfantController extends Controller
      */
     public function create()
     {
-        //
+        return view('enfants.ajouter');
     }
 
     /**
@@ -35,7 +36,19 @@ class EnfantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $enfant =new Enfant();
+
+        $enfant->id = "2727";
+        $enfant->nom = request('nom');
+        $enfant->prenom = "has";
+        $enfant->sex = 1;
+        $enfant->observation = "this is 	observation";
+        $enfant->pere_id = 5;
+        $enfant->date_naissance = '1995-06-12';
+        $enfant->lieu_naissance = 'djorf';
+        $enfant->commune_id = 1;
+
+        $enfant->save();
     }
 
     /**

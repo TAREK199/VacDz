@@ -13,10 +13,10 @@ class="active"
                        
                        <h1 align="center"> COMMING SOON</h1>
                         
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+</div>    
 @endsection
