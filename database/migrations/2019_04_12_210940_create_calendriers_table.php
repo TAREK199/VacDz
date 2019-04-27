@@ -15,7 +15,7 @@ class CreateCalendriersTable extends Migration
     {
         Schema::create('calendriers', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('epsp_id');
+            $table->integer('age');
             $table->unsignedInteger('vaccin_id');
             $table->timestamps();
         });

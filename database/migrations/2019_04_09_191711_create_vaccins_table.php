@@ -17,7 +17,7 @@ class CreateVaccinsTable extends Migration
             $table->increments('id');
             $table->string('nom_abrevier');
             $table->string('nom_complet');
-            $table->string('age');
+            $table->text('description');
             $table->timestamps();
         });
     }

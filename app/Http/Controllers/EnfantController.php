@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Enfant;
+use App\Commune;
 use Illuminate\Http\Request;
+use App\Vaccination;
 
 class EnfantController extends Controller
 {
@@ -14,7 +16,8 @@ class EnfantController extends Controller
      */
     public function index()
     {
-        return view('enfants.index');
+        $enfants = Enfant::all();
+        return view('enfants.index',compact('enfants'));
         
     }
 
@@ -38,7 +41,7 @@ class EnfantController extends Controller
     {
         $enfant =new Enfant();
 
-        $enfant->id = "2727";
+        $enfant->id = "5555";
         $enfant->nom = request('nom');
         $enfant->prenom = "has";
         $enfant->sex = 1;
@@ -49,6 +52,7 @@ class EnfantController extends Controller
         $enfant->commune_id = 1;
 
         $enfant->save();
+         
     }
 
     /**
@@ -59,9 +63,11 @@ class EnfantController extends Controller
      */
     public function show(Enfant $enfant)
     {
-        //
+        $vaccinations = Vaccination::all()->where('enfant_id',$enfant->id);
+        $ages=Vaccination::distinct('age')-> get('age');
+        return view('enfants.enfant',compact('enfant','vaccinations','ages'));
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -70,7 +76,7 @@ class EnfantController extends Controller
      */
     public function edit(Enfant $enfant)
     {
-        //
+        dd('edit');
     }
 
     /**
@@ -82,7 +88,7 @@ class EnfantController extends Controller
      */
     public function update(Request $request, Enfant $enfant)
     {
-        //
+        dd("update");
     }
 
     /**

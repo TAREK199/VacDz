@@ -16,6 +16,10 @@ class CreateVaccinationsTable extends Migration
         Schema::create('vaccinations', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date_vaccination');
+            $table->unsignedInteger('polyclinique_id');
+            $table->unsignedInteger('vaccin_id');
+            $table->unsignedInteger('enfant_id');
+            $table->integer('age');//to know the right vaccin
             $table->timestamps();
         });
     }

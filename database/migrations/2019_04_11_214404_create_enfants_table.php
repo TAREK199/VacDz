@@ -21,7 +21,7 @@ class CreateEnfantsTable extends Migration
             $table->text('observation');
             $table->unsignedInteger('pere_id');
             $table->date('date_naissance');
-            $table->string('lieu_naissance');//
+            $table->string('lieu_naissance');//maternite
             $table->unsignedInteger('commune_id');
             $table->timestamps();
         });

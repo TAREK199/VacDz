@@ -77,3 +77,4 @@
       <script src="js/data-table/bootstrap-table-resizable.js"></script>
       <script src="js/data-table/colResizable-1.5.source.js"></script>
       <script src="js/data-table/bootstrap-table-export.js"></script>
+      <script src="js/jquery.meanmenu.js"></script>

@@ -16,7 +16,6 @@ class CreateVaccinationInfosTable extends Migration
         Schema::create('vaccination_infos', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('vaccination_id');
-            $table->unsignedInteger('vaccin_id');
             $table->string('num_lot');
             $table->boolean('type_vaccin');
             $table->date('date_production');
